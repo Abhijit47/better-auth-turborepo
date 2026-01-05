@@ -7,7 +7,7 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "devtools": "turbo devtools"
+    "devtools": "turbo devtools --no-open"
   },
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",
