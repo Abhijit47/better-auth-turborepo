@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
+import { InsertUser } from '@workspace/db/auth-types';
 
 @Injectable()
 export class UsersService {
-  create(createUserDto: CreateUserDto) {
+  create(createUserDto: Omit<InsertUser, 'id' | 'createdAt' | 'updatedAt'>) {
+    console.log(createUserDto);
     return 'This action adds a new user';
   }
 
@@ -16,7 +16,11 @@ export class UsersService {
     return `This action returns a #${id} user`;
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
+  update(
+    id: number,
+    updateUserDto: Partial<Omit<InsertUser, 'id' | 'createdAt' | 'updatedAt'>>,
+  ) {
+    console.log(updateUserDto);
     return `This action updates a #${id} user`;
   }
 
