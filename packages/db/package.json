@@ -28,6 +28,10 @@
     "./auth-db": {
       "types": "./dist/auth-db/index.d.ts",
       "default": "./dist/auth-db/index.js"
+    },
+    "./auth-types": {
+      "types": "./dist/auth-types/index.d.ts",
+      "default": "./dist/auth-types/index.js"
     }
   }
 }
